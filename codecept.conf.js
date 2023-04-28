@@ -22,7 +22,7 @@ exports.config = {
     },
 
     Appium: {
-      app: 'C:/Users/flexmobile/Documents/automacaoSupervisor/apks/supervisor/superv.apk',
+      app: 'C:/Users/flexmobile/Documents/automacaoSupervisor/automacaosupervisor/apks/supervisor/superv.apk',
       platform: 'Android',
       device: 'pixel 2',
       restart: false,
