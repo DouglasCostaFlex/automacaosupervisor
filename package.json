@@ -1,0 +1,21 @@
+{
+  "name": "automacaosupervisor",
+  "version": "1.0.0",
+  "description": "projeto de automaçao do aplicativo supervisor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codeceptjs": "^3.4.1",
+    "codeceptjs-resemblehelper": "^1.9.7",
+    "mochawesome": "^7.1.3",
+    "webdriverio": "^8.8.4"
+  },
+  "devDependencies": {
+    "allure-mocha": "^2.1.0",
+    "mocha": "^10.2.0"
+  }
+}
