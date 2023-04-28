@@ -1,4 +1,4 @@
-Feature('Tela Inicial').tag('@Tela_Inicial');
+Feature('Tela Inicial').tag('@TelaInicial');
 
 const {
 
@@ -16,18 +16,18 @@ Scenario('Total de Vendas', () => {
     tryTo(() => loginPage.doLoginIniciarNovamenteAteoHome(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
     //EU ESPEROO VER O TOTAL DE VENDAS
     I.seeElement('#br.com.flexmobile.superv:id/total_vendas')
-});
+}).tag('@TotalDeVendas');
 
-Scenario('Total Sde devolução', () => {
+Scenario('Total de devolução', () => {
     //EU ESPERO VER O TOTAL DE DEVOLUÇÃO
     I.seeElement('#br.com.flexmobile.superv:id/total_devolucao')
-});
+}).tag('@TotalDeDevolução');;
 
 Scenario('Total de clientes', () => {
 
     //EU ESPERO VER O  TOTAL CLIENTES
     I.seeElement('#br.com.flexmobile.superv:id/total_clientes')
-});
+}).tag('@TotalDeClientes');
 
 Scenario('Gráficos', () => {
 
@@ -44,4 +44,4 @@ Scenario('Top Clientes E Top Produtos', () => {
     scrolPage.doScrol(300, 250, 300, 1800)
     I.wait(2)
 
-});
+}).tag("@TopClientesETopProdutos");
