@@ -1,0 +1,2 @@
+const { I, loginPage } = inject()
+

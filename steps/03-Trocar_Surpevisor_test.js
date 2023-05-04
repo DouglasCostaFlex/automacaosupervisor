@@ -8,17 +8,29 @@ const {
     SENHA_CORRETA //SENHA CORRETA
 } = require('../config.js');
 
-const { I, clickNaTelaPage,loginPage } = inject()
+const { I,loginPage,clickNaTelaPage } = inject()
 
  
 Scenario('Selecionar surpevisor', () => {
 
-    //EU COMO USUARIO ESPERO TROCAR O SURPERVISOR
+    //EU COMO USUARIO ESPERO TROCAR O SURPERVISOR//
+
+    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
     tryTo(() => loginPage.doLoginIniciarNovamenteAteoHome(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+   // EU APERTO NO BOTAO TROCAR SUPERVISOR.
     I.tap('#br.com.flexmobile.superv:id/selecionar_supervisor')
+     //EU ESPERO.
     I.wait(3)
-    clickNaTelaPage.doClick(350, 270)
-    I.wait(2)
+    // EU TIRO UMA FOTO.                                            
+    I.saveScreenshot("10-TrocarSupervisor_Screenshot_Image.png");
+    // EU COMPARO A FOTO COM A DA BASE.
+    I.seeVisualDiff("10-TrocarSupervisor_Screenshot_Image.png", {tolerance: 4, prepareBaseImage: false});
+    //EU ESPERO.
+    I.wait(1)
+    // EU CLICO NA TELA.
+    clickNaTelaPage.doClick(335, 300)
+    //EU ESPERO.
+    I.wait(5)
     
 }).tag('@SelecionarSurpevisor');
 
