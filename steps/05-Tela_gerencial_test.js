@@ -2,7 +2,7 @@ Feature('Tela Gerencial').tag('@Tela_Gerencial');
 const { I, clickNaTelaPage, loginPage } = inject()
 const {
 
-    CNPJ_CORRETO,  // CNPJ ERRADO
+    CNPJ_CORRETO,  // CNPJ CORRETO
     CD_FUNC,  // CODIGO DE FUNCIONARIO CORRETO
     USUARIO_CORRETO, //USUARIO CORRETO 
     SENHA_CORRETA //SENHA CORRETA

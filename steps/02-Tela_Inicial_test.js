@@ -1,4 +1,4 @@
-Feature('Tela Inicial').tag('@Tela_Inicial');
+Feature('Tela Inicial').tag('@TelaInicial');
 
 const {
 
@@ -42,7 +42,13 @@ Scenario('Total de devolução', () => {
     //EU ESPERO.
     I.wait(1)
 
-});
+}).tag('@TotalDeVendas');
+
+Scenario('Total de devolução', () => {
+    //EU ESPERO VER O TOTAL DE DEVOLUÇÃO
+    I.seeElement('#br.com.flexmobile.superv:id/total_devolucao')
+}).tag('@TotalDeDevolução');
+
 
 Scenario('Total de clientes', () => {
     //EU ESPERO VER O  TOTAL CLIENTES//
@@ -58,7 +64,9 @@ Scenario('Total de clientes', () => {
     // EU ESPERO.
     I.wait(1)
 
-});
+
+
+}).tag('@TotalDeClientes');
 
 Scenario('Gráficos', () => {
     // EU ESPERO ENCONTRAR O GRAFICO DE VENDAS.//
@@ -123,6 +131,4 @@ Scenario('Top Produtos', () => {
     I.performSwipe({ x: 920, y: 280 }, { x: 280, y: 1740 });
     // EU ESPERO
     I.wait(2)
-
-
-});
+}).tag("@TopClientesETopProdutos");
