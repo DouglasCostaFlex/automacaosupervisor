@@ -17,6 +17,7 @@ Scenario('Selecionar surpevisor', () => {
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
     tryTo(() => loginPage.doLoginIniciarNovamenteAteoHome(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    
    // EU APERTO NO BOTAO TROCAR SUPERVISOR.
     I.tap('#br.com.flexmobile.superv:id/selecionar_supervisor')
      //EU ESPERO.

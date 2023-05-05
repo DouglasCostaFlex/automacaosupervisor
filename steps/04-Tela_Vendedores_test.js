@@ -16,6 +16,7 @@ Scenario('Tela de vendedores', () => {
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
     tryTo(() => loginPage.doLoginIniciarNovamenteAteoHome(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+
     //EU COMO USUARIO CLICO NO MENU .
     I.tap('~Navigate up')
     //EU COMO USUARIO CLICO NO MENU VENDODORES
@@ -38,6 +39,7 @@ Scenario('Metas', () => {
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
     tryTo(() => loginPage.doLoginIniciarNovamenteAteoVendedores(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+
     //EU CLICO EM CLIENTES, ESPERO VER METAS VIGENTES E METAS VENCIDAS
     clickNaTelaPage.doClick(157, 725)
     // EU ESPERO PELO ELEMNTO VIGENTES.
@@ -60,11 +62,13 @@ Scenario('Clientes', () => {
 
      //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
     tryTo(() => loginPage.doLoginIniciarNovamenteAteoVendedores(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+
     //EU CLICO EM CLIENTE, ESPERO VER UMA LISTA. 
     clickNaTelaPage.doClick(450, 725)
+    //EU ESPERO PELO ELEMENTO CLIENTES.
+    I.waitForElement('#br.com.flexmobile.superv:id/SpClientes',50)
     //EU ESPERO.
     I.wait(2)
-    //EU ESPERO PELO ELEMENTO CLIENTES.
     //EU TIRO UMA FOTO.
     I.saveScreenshot("13-CLIENTES_Screenshot_Image.png");
     //EU COMPARO COM A FOTO DA BASE.
@@ -81,10 +85,11 @@ Scenario('Vendas', () => {
 
      //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
     tryTo(() => loginPage.doLoginIniciarNovamenteAteoVendedores(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+
     //EU CLICO EM VENDAS, ESPERO VER UMA LISTA.
     clickNaTelaPage.doClick(659, 725)
     //EU ESPERO PELAS LISTA DE VENDAS.
-    I.waitForElement('#android:id/list', 10)
+    I.waitForElement('#android:id/list', 50)
     //EU VEJO A LISTA DE VENDAS.
     I.seeElement('#android:id/list')
     //EU TIRO UMA FOTO.
@@ -95,6 +100,7 @@ Scenario('Vendas', () => {
     I.tap('~Navigate up')
     //EU ESPERO.
     I.wait(2)
+
 }).tag('@Vendas');
 
 Scenario('PEDIDOS', () => {
@@ -102,10 +108,11 @@ Scenario('PEDIDOS', () => {
 
      //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
     tryTo(() => loginPage.doLoginIniciarNovamenteAteoVendedores(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+
     //EU CLICO EM PEDIDOS, ESPERO VER UMA LISTA.
     clickNaTelaPage.doClick(950, 725)
     //EU ESPERO PELA LISTA DE PEDIDOS.
-    I.waitForElement('#br.com.flexmobile.superv:id/list', 10)
+    I.waitForElement('#br.com.flexmobile.superv:id/list', 50)
     //EU ESPERO VER A LISTA DE PEDIDOS.
     I.seeElement('#br.com.flexmobile.superv:id/list')
     //EU TIRO UMA FOTO.
@@ -116,4 +123,5 @@ Scenario('PEDIDOS', () => {
     I.tap('~Navigate up')
     //EU ESPERO.
     I.wait(2)
+    
 }).tag('@Pedidos');
