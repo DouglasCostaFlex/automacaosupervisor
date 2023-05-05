@@ -29,7 +29,9 @@ module.exports = {
     I.fillField(this.fields.CNPJ, CNPJ)
     I.fillField(this.fields.CODFUNC, CODFUNC)
     I.tap('#br.com.flexmobile.superv:id/BtnOk')
-    I.waitForElement('#android:id/message', 5)
+    I.waitForElement('#android:id/message', 50)
+    I.saveScreenshot("01-CNPJ_ERRADO_Screenshot_Image.png");
+    I.seeVisualDiff("01-CNPJ_ERRADO_Screenshot_Image.png", {tolerance: 2, prepareBaseImage: false});
     I.tap('#android:id/button3')
   },
 
@@ -44,8 +46,6 @@ module.exports = {
     I.fillField(this.fields.CDFUNC, CDFUNC)
     I.fillField(this.fields.SENHA, SENHA)
     I.tap('#br.com.flexmobile.superv:id/BTNLogin')
-    I.waitForElement('#android:id/button3', 10)
-    I.tap('#android:id/button3')
   },
   doLoginUserCorreto(CDFUNC, SENHA) {
     I.fillField(this.fields.CDFUNC, CDFUNC)
@@ -54,7 +54,10 @@ module.exports = {
     I.tap('#br.com.flexmobile.superv:id/BTNLogin');
     I.wait(4);
     tryTo(() => I.tap('#android:id/button1'));
-    I.waitForElement('~Navigate up', 300);
+    I.waitForElement('~Navigate up', 1200);
+    I.wait(2)
+    I.saveScreenshot("04-HOME_Screenshot_Image.png");
+    I.seeVisualDiff("04-HOME_Screenshot_Image.png", {tolerance: 2, prepareBaseImage: false});
   },
 
   doLoginIniciarNovamenteAteoHome(CNPJ, CODFUNC, CDFUNC, SENHA) {
@@ -68,7 +71,7 @@ module.exports = {
     I.tap('#br.com.flexmobile.superv:id/BTNLogin');
     I.wait(2);
     tryTo(() => I.tap('#android:id/button1'));
-    I.waitForElement('~Navigate up', 300);
+    I.waitForElement('~Navigate up', 800);
   },
   doLoginIniciarNovamenteAtéoGerencial(CNPJ, CODFUNC, CDFUNC, SENHA) {
     I.fillField(this.fields.CNPJ, CNPJ)
@@ -81,7 +84,7 @@ module.exports = {
     I.tap('#br.com.flexmobile.superv:id/BTNLogin');
     I.wait(2);
     tryTo(() => I.tap('#android:id/button1'));
-    I.waitForElement('~Navigate up', 300);
+    I.waitForElement('~Navigate up', 600);
     I.tap('~Navigate up')
     I.tap('Gerencial')
   },
@@ -97,7 +100,7 @@ module.exports = {
     I.tap('#br.com.flexmobile.superv:id/BTNLogin');
     I.wait(2);
     tryTo(() => I.tap('#android:id/button1'));
-    I.waitForElement('~Navigate up', 300)
+    I.waitForElement('~Navigate up', 600)
     I.tap('~Navigate up')
     I.tap('Vendedores')
 

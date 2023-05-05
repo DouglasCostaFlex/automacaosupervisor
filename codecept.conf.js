@@ -17,8 +17,9 @@ exports.config = {
 
     ResembleHelper: {
       require: "codeceptjs-resemblehelper",
-      baseFolder: '/tests/screenshots/base/',
-      diffFolder: '.tests/screenshots/diff/',
+      screenshotFolder : "./screenshots/output/",
+      baseFolder: './screenshots/BaseImage/',
+      diffFolder: './screenshots/diff/',
     },
 
     Appium: {
@@ -26,7 +27,6 @@ exports.config = {
       platform: 'Android',
       device: 'pixel 2',
       restart: false,
-      resetOnSessionStartOnly:true,
       appWaitDuration:10,
 
       desiredCapabilities: {
