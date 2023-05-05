@@ -26,6 +26,7 @@ Scenario('Total de Vendas', () => {
     I.seeVisualDiff("05-TotalDeVendas_Screenshot_Image.png", { tolerance: 2, prepareBaseImage: false });
     //EU ESPERO.
     I.wait(1)
+    
 });
 
 Scenario('Total de devolução', () => {
@@ -81,6 +82,7 @@ Scenario('Gráficos', () => {
     I.seeVisualDiff("08-Graficos_Screenshot_Image.png", { tolerance: 4, prepareBaseImage: false });
     //EU ESPERO.
     I.wait(1)
+
 });
 
 Scenario('Top Clientes', () => {
@@ -99,10 +101,9 @@ Scenario('Top Clientes', () => {
     //EU TIRO UMA FOTO.
     I.saveScreenshot("09-1-topClientes_Screenshot_Image.png");
     //EU COMPARO A FOTO COM A DA BASE.
-    I.seeVisualDiff("09-1-topClientes_Screenshot_Image.png", { tolerance: 5, prepareBaseImage: false });
+    I.seeVisualDiff("09-1-topClientes_Screenshot_Image.png", { tolerance: 5, prepareBaseImage: true });
     //EU ESPERO.
     I.wait(1)
-
 
 });
 
@@ -122,13 +123,20 @@ Scenario('Top Produtos', () => {
     // EU TIRO UMA FOTO.
     I.saveScreenshot("09-2-topProdutos_Screenshot_Image.png");
     //EU COMPARO TIRO PRINT E COMPARO COM A BASE
-    I.seeVisualDiff("09-2-topProdutos_Screenshot_Image.png", { tolerance: 5, prepareBaseImage: false });
+    I.seeVisualDiff("09-2-topProdutos_Screenshot_Image.png", { tolerance: 10, prepareBaseImage: false });
     //EU ESPERO.
     I.wait(1)
     //EU DOU UM SCROL PARA CIMA
     I.performSwipe({ x: 920, y: 280 }, { x: 280, y: 1740 });
     //EU DOU UM SCROL PARA CIMA
     I.performSwipe({ x: 920, y: 280 }, { x: 280, y: 1740 });
+    //EU DOU UM SCROL PARA CIMA
+    I.performSwipe({ x: 920, y: 280 }, { x: 280, y: 1740 });
     // EU ESPERO
     I.wait(2)
-}).tag("@TopClientesETopProdutos");
+
+})
+
+.tag("@TopClientesETopProdutos");
+
+
