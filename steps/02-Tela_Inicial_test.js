@@ -134,9 +134,9 @@ Scenario('Top Produtos', () => {
     I.performSwipe({ x: 920, y: 280 }, { x: 280, y: 1740 });
     // EU ESPERO
     I.wait(2)
-<<<<<<< HEAD
 
-});
-=======
-}).tag("@TopClientesETopProdutos");
->>>>>>> c274a267c589ee94ebc44b444909469920c4b189
+})
+
+.tag("@TopClientesETopProdutos");
+
+
