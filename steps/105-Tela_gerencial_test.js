@@ -8,7 +8,7 @@ const {
     SENHA_CORRETA //SENHA CORRETA
 } = require('../config.js');
 
-Scenario('Relatorios Web', () => {
+Scenario('01-Relatorios Web', () => {
     //EU CLICO EM RELATORIOS WEB, ESPERO CARREGAR PAGINA, ESPERO PELOS DADOS NA TELA.//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -16,6 +16,7 @@ Scenario('Relatorios Web', () => {
 
     //EU CLICO NO MENU.
     I.tap('~Navigate up')
+    I.wait(1)
     //EU CLICO EM GERENCIAL.
     I.tap('Gerencial')
     //EU DOU UM CLICK EM RELATORIOS WEB.
@@ -37,7 +38,7 @@ Scenario('Relatorios Web', () => {
 
 }).tag('@RelatoriosWeb');
 
-Scenario('Lista Clientes', () => {
+Scenario('02-Lista Clientes', () => {
     //EU CLICO EM LISTA CLIENTES E ESPERO POR CLIENTES.//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -65,7 +66,7 @@ Scenario('Lista Clientes', () => {
 
 }).tag('@ListaClientes');
 
-Scenario('Clientes Sem Venda', () => {
+Scenario('03-Clientes Sem Venda', () => {
     // EU CLICO EM CLIENTES SEM VENDA, ESPERO POR CLIENTES SEM VENDA//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -92,7 +93,7 @@ Scenario('Clientes Sem Venda', () => {
 
 }).tag('@ClientesSemVenda');
 
-Scenario('Cliente inadiplentes', () => {
+Scenario('04-Cliente inadimplentes', () => {
     // EU CLICO EM CLIENTES INADIPLENTES, ESPERO POR CLIENTES INADIPLENTES//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -120,7 +121,7 @@ Scenario('Cliente inadiplentes', () => {
 }).tag('@ClienteInadiplentes');
 
 
-Scenario('Minhas Metas ', () => {
+Scenario('05-Minhas Metas ', () => {
     // CLICO EM METAS, ESPERO POR METAS.//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -151,7 +152,7 @@ Scenario('Minhas Metas ', () => {
 
 }).tag('@MinhasMetas');
 
-Scenario('Resumo por vendedor', () => {
+Scenario('06-Resumo por vendedor', () => {
     //CLICO EM VENDEDOR E ESPERO POR ELEMENTOS//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -178,7 +179,7 @@ Scenario('Resumo por vendedor', () => {
 
 }).tag('@ResumoPorVendedor');
 
-Scenario('Resumo diario', () => {
+Scenario('07-Resumo diario', () => {
     //CLICO EM RESUMO DIARIOS E ESPERO POR ELEMENTOS.//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -204,7 +205,7 @@ Scenario('Resumo diario', () => {
 
 }).tag('@resumoDiario');
 
-Scenario('Resumo devoluções', () => {
+Scenario('08-Resumo devoluções', () => {
     //CLICO EM RESUMO DEVOLUÇÕES E ESPERO POR ELEMENTOS.//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -233,7 +234,7 @@ Scenario('Resumo devoluções', () => {
 
 }).tag('@ResumoDevoluçoes');
 
-Scenario('Venda por grupo de produtos', () => {
+Scenario('09-Venda por grupo de produtos', () => {
     //EU CLICO EM VENDAS E ESPERO POR ELEMENTOS.//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -261,7 +262,7 @@ Scenario('Venda por grupo de produtos', () => {
 
 }).tag('@VendaPorGrupoDeProdutos');
 
-Scenario('Vendas por linha de produto', () => {
+Scenario('010-Vendas por linha de produto', () => {
     //EU APERTO EM VENDAS E ESPERO POR ELEMENTOS.//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -290,7 +291,7 @@ Scenario('Vendas por linha de produto', () => {
 
 }).tag('@VendasPorLinhaDeProduto');
 
-Scenario('Clientes por linha de produto', () => {
+Scenario('011-Clientes por linha de produto', () => {
     //EU CLICO EM LINHA DE PRODUTO E ESPERO ELEMENTOS.//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -317,7 +318,7 @@ Scenario('Clientes por linha de produto', () => {
 
 }).tag('@ClientesPorLinhaDeProduto');
 
-Scenario('Relatório de produtividade', () => {
+Scenario('012-Relatório de produtividade', () => {
     //EU CLICO EM RELATORIO DE PRODUTIVIDADE E ESPERO POR ELEMENTOS//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -352,7 +353,7 @@ Scenario('Relatório de produtividade', () => {
 
 }).tag('@RelatorioDeProdutividade');
 
-Scenario('Mostrar saldo flex', () => {
+Scenario('013-Mostrar saldo flex', () => {
     //EU APERTO EM MOSTRAR SALDO FLEX//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -379,7 +380,7 @@ Scenario('Mostrar saldo flex', () => {
 
 }).tag('@MostrarSaldoFlex');
 
-Scenario('Entradas de estoque no dia', () => {
+Scenario('014-Entradas de estoque no dia', () => {
     //EU APERTO EM ENTRADAS DE ESTOQUE NO DIA E ESPERO POR ELEMENTOS//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -396,11 +397,11 @@ Scenario('Entradas de estoque no dia', () => {
     // EU ESPERO POR ELEMENTOS.
     I.waitForElement('#br.com.flexmobile.superv:id/btnSinc', 200)
     //EU ESPERO.
-    I.wait(2)
+    I.wait(10)
     //EU TIRO UMA FOTO.
     I.saveScreenshot("29-EntradasDeEstoqueNoDia_Screenshot_Image.png");
     //EU COMPARO O PRINT COM O A IMAGEM BASE
-    I.seeVisualDiff("29-EntradasDeEstoqueNoDia_Screenshot_Image.png", { tolerance: 4, prepareBaseImage: false });
+    I.seeVisualDiff("29-EntradasDeEstoqueNoDia_Screenshot_Image.png", { tolerance: 4, prepareBaseImage: true });
     // EU ESPERO
     I.wait(4)
     //EU APERTO NO BOTAO

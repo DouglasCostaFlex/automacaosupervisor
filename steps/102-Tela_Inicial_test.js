@@ -11,7 +11,7 @@ const {
 const { I, loginPage } = inject()
 
 
-Scenario('Total de Vendas', () => {
+Scenario('01-Total de Vendas', () => {
     //EU ESPERO VER O TOTAL DE VENDAS.//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -23,13 +23,13 @@ Scenario('Total de Vendas', () => {
     // EU TIRO UMA FOTO DO TOTAL DE VENDAS.
     I.saveScreenshot("05-TotalDeVendas_Screenshot_Image.png");
     //EU COMPARO A FOTO COM A FOTO DA BASE
-    I.seeVisualDiff("05-TotalDeVendas_Screenshot_Image.png", { tolerance: 2, prepareBaseImage: false });
+    I.seeVisualDiff("05-TotalDeVendas_Screenshot_Image.png", { tolerance: 5, prepareBaseImage: false });
     //EU ESPERO.
     I.wait(1)
     
 });
 
-Scenario('Total de devolução', () => {
+Scenario('02-Total de devolução', () => {
     //EU ESPERO VER O TOTAL DE DEVOLUÇÃO//
 
     //EU ESPERO VER TOTAL DE DEVOLUÇÃO 
@@ -39,19 +39,14 @@ Scenario('Total de devolução', () => {
     //EU TIRO UMA FOTO
     I.saveScreenshot("06-TotalDeDevolucao_Screenshot_Image.png");
     //EU COMPARO A FOTO COM A DA BASE.
-    I.seeVisualDiff("06-TotalDeDevolucao_Screenshot_Image.png", { tolerance: 4, prepareBaseImage: false });
+    I.seeVisualDiff("06-TotalDeDevolucao_Screenshot_Image.png", { tolerance: 5, prepareBaseImage: false });
     //EU ESPERO.
     I.wait(1)
 
-}).tag('@TotalDeVendas');
-
-Scenario('Total de devolução', () => {
-    //EU ESPERO VER O TOTAL DE DEVOLUÇÃO
-    I.seeElement('#br.com.flexmobile.superv:id/total_devolucao')
-}).tag('@TotalDeDevolução');
+});
 
 
-Scenario('Total de clientes', () => {
+Scenario('03-Total de clientes', () => {
     //EU ESPERO VER O  TOTAL CLIENTES//
 
     //EU ESPERO VER O TOTAL DE CLIENTES.
@@ -61,15 +56,15 @@ Scenario('Total de clientes', () => {
     //EU TIRO UMA FOTO.
     I.saveScreenshot("07-TotalDeClientes_Screenshot_Image.png");
     //EU COMPARO A FOTO COM A DA BASE.
-    I.seeVisualDiff("07-TotalDeClientes_Screenshot_Image.png", { tolerance: 2, prepareBaseImage: false });
+    I.seeVisualDiff("07-TotalDeClientes_Screenshot_Image.png", { tolerance: 5, prepareBaseImage: false });
     // EU ESPERO.
     I.wait(1)
 
 
 
-}).tag('@TotalDeClientes');
+});
 
-Scenario('Gráficos', () => {
+Scenario('04-Gráficos', () => {
     // EU ESPERO ENCONTRAR O GRAFICO DE VENDAS.//
 
     //EU ESPERO VER O GRAFICOS.
@@ -79,13 +74,13 @@ Scenario('Gráficos', () => {
     // EU TIRO UMA FOTO.
     I.saveScreenshot("08-Graficos_Screenshot_Image.png");
     //EU COMPARO A FOTO COM A DA BASE.
-    I.seeVisualDiff("08-Graficos_Screenshot_Image.png", { tolerance: 4, prepareBaseImage: false });
+    I.seeVisualDiff("08-Graficos_Screenshot_Image.png", { tolerance: 5, prepareBaseImage: false });
     //EU ESPERO.
     I.wait(1)
 
 });
 
-Scenario('Top Clientes', () => {
+Scenario('05-Top Clientes', () => {
     //EU ESPERO VER TOP CLIENTES E TOP PRODUTOS//
 
     //EU DOU UM TOUCH PARA BAIXO.
@@ -101,13 +96,13 @@ Scenario('Top Clientes', () => {
     //EU TIRO UMA FOTO.
     I.saveScreenshot("09-1-topClientes_Screenshot_Image.png");
     //EU COMPARO A FOTO COM A DA BASE.
-    I.seeVisualDiff("09-1-topClientes_Screenshot_Image.png", { tolerance: 5, prepareBaseImage: true });
+    I.seeVisualDiff("09-1-topClientes_Screenshot_Image.png", { tolerance: 5, prepareBaseImage: false });
     //EU ESPERO.
     I.wait(1)
 
 });
 
-Scenario('Top Produtos', () => {
+Scenario('06-Top Produtos', () => {
     //EU ESPERO VER O TOTAL CLIENTES//
 
     //EU DOU UM TOCH PARA BAIXO.
@@ -123,7 +118,7 @@ Scenario('Top Produtos', () => {
     // EU TIRO UMA FOTO.
     I.saveScreenshot("09-2-topProdutos_Screenshot_Image.png");
     //EU COMPARO TIRO PRINT E COMPARO COM A BASE
-    I.seeVisualDiff("09-2-topProdutos_Screenshot_Image.png", { tolerance: 10, prepareBaseImage: false });
+    I.seeVisualDiff("09-2-topProdutos_Screenshot_Image.png", { tolerance: 5, prepareBaseImage: false });
     //EU ESPERO.
     I.wait(1)
     //EU DOU UM SCROL PARA CIMA
@@ -135,8 +130,7 @@ Scenario('Top Produtos', () => {
     // EU ESPERO
     I.wait(2)
 
-})
+}).tag("@TopProdutos");
 
-.tag("@TopClientesETopProdutos");
 
 

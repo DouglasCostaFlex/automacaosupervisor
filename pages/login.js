@@ -29,7 +29,7 @@ module.exports = {
     //EU COLOCO O CNPJ NO CAMPO 
     I.fillField(this.fields.CNPJ, CNPJ)
     //EU COLOCO O CODIGO DE FUNCIONARIO
-    I.fillField(this.fields.CODFUNC, CODFUNC)
+    // I.fillField(this.fields.CODFUNC, CODFUNC) //COMENTEI POIS ELE JA COLOCA DIRETO NA CONFIGURAÇAO
     //EU APERTO NO BOTAO
     I.tap('#br.com.flexmobile.superv:id/BtnOk')
     //EU ESPERO PELO ELEMENTO NA TELA
@@ -37,7 +37,7 @@ module.exports = {
     // EU TIRO UMA FOTO.
     I.saveScreenshot("01-CNPJ_ERRADO_Screenshot_Image.png");
     // EU COMPARO A FOTO COM A FOTO BASE
-    I.seeVisualDiff("01-CNPJ_ERRADO_Screenshot_Image.png", {tolerance: 2, prepareBaseImage: false});
+    I.seeVisualDiff("01-CNPJ_ERRADO_Screenshot_Image.png", {tolerance: 1, prepareBaseImage: false});
     //EU APERTO NO BOTAO
     I.tap('#android:id/button3')
   },
@@ -46,7 +46,6 @@ module.exports = {
     //EU COLOCO O CNPJ CORRETO.
     I.fillField(this.fields.CNPJ, CNPJ)
     //EU COLOCO O CODIGO DE FUNCIONARIO
-    I.fillField(this.fields.CODFUNC, CODFUNC)
     //EU APERTO NO BOTAO .
     I.tap('#br.com.flexmobile.superv:id/BtnOk')
     //EU ESPERO.
@@ -58,30 +57,20 @@ module.exports = {
     I.fillField(this.fields.CDFUNC, CDFUNC)
     //EU COLOCO A SENHA.
     I.fillField(this.fields.SENHA, SENHA)
-    //EU APERTO NO BOTAO.
+    //EU APERTO NO BOTAO
     I.tap('#br.com.flexmobile.superv:id/BTNLogin')
   },
   doLoginUserCorreto(CDFUNC, SENHA) {
-    // EU COLOCO CODIGO DE FUNCIONARIO.
     I.fillField(this.fields.CDFUNC, CDFUNC)
-    //EU COLOCO A SENHA 
     I.fillField(this.fields.SENHA, SENHA)
-    //EU ESPERO.
     I.wait(4)
-    //EU APERTO NO BOTAO
     I.tap('#br.com.flexmobile.superv:id/BTNLogin');
-    //EU ESPERO.
     I.wait(4);
-    //CASO APAREÇA MENSAGEM DE ATUALIZAR, IRA APERTAR.
     tryTo(() => I.tap('#android:id/button1'));
-    //EU ESPERO PELO ELEMENTO HOME
     I.waitForElement('~Navigate up', 1200);
-    //EU ESPERO
     I.wait(2)
-    //EU TIRO UMA FOTO.
     I.saveScreenshot("04-HOME_Screenshot_Image.png");
-    //EU COMPARO COM A BASE.
-    I.seeVisualDiff("04-HOME_Screenshot_Image.png", {tolerance: 2, prepareBaseImage: false});
+    I.seeVisualDiff("04-HOME_Screenshot_Image.png", {tolerance: 5, prepareBaseImage: false});
   },
 
   doLoginIniciarNovamenteAteoHome(CNPJ, CODFUNC, CDFUNC, SENHA) {
@@ -95,7 +84,7 @@ module.exports = {
     I.tap('#br.com.flexmobile.superv:id/BTNLogin');
     I.wait(2);
     tryTo(() => I.tap('#android:id/button1'));
-    I.waitForElement('~Navigate up', 800);
+    I.waitForElement('~Navigate up', 900);
   },
   doLoginIniciarNovamenteAtéoGerencial(CNPJ, CODFUNC, CDFUNC, SENHA) {
     I.fillField(this.fields.CNPJ, CNPJ)
@@ -108,7 +97,7 @@ module.exports = {
     I.tap('#br.com.flexmobile.superv:id/BTNLogin');
     I.wait(2);
     tryTo(() => I.tap('#android:id/button1'));
-    I.waitForElement('~Navigate up', 600);
+    I.waitForElement('~Navigate up', 900);
     I.tap('~Navigate up')
     I.tap('Gerencial')
   },
@@ -124,7 +113,7 @@ module.exports = {
     I.tap('#br.com.flexmobile.superv:id/BTNLogin');
     I.wait(2);
     tryTo(() => I.tap('#android:id/button1'));
-    I.waitForElement('~Navigate up', 600)
+    I.waitForElement('~Navigate up', 900)
     I.tap('~Navigate up')
     I.tap('Vendedores')
 

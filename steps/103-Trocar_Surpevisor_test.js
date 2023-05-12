@@ -11,7 +11,7 @@ const {
 const { I,loginPage,clickNaTelaPage } = inject()
 
  
-Scenario('Selecionar surpevisor', () => {
+Scenario('01-Selecionar e Trocar surpevisor', () => {
 
     //EU COMO USUARIO ESPERO TROCAR O SURPERVISOR//
 

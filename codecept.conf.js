@@ -17,7 +17,7 @@ exports.config = {
 
     ResembleHelper: {
       require: "codeceptjs-resemblehelper",
-      screenshotFolder : "./screenshots/output/",
+      screenshotFolder: "./screenshots/output/",
       baseFolder: './screenshots/BaseImage/',
       diffFolder: './screenshots/diff/',
     },
@@ -27,7 +27,7 @@ exports.config = {
       platform: 'Android',
       device: 'pixel 2',
       restart: false,
-      appWaitDuration:10,
+      appWaitDuration: 10,
 
       desiredCapabilities: {
         appPackage: 'br.com.flexmobile.superv',
@@ -53,7 +53,7 @@ exports.config = {
     homePage: "./pages/home.js",
     scrolPage: "./pages/scrol.js",
     clickNaTelaPage: "./pages/clickNaTela.js",
-    
+    compareHashPage: "./pages/CompareHash.js"
   },
   name: 'automacaoSupervisor'
 }

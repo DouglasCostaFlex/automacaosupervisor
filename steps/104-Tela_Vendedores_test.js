@@ -11,7 +11,7 @@ const {
 
 const { I, clickNaTelaPage, loginPage } = inject()
 
-Scenario('Tela de vendedores', () => {
+Scenario('01-Menu Inicial Tela de vendedores', () => {
     //EU ENTRO NA TELA VENDEDORES//
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -28,13 +28,13 @@ Scenario('Tela de vendedores', () => {
     //EU TIRO UMA FOTO.
     I.saveScreenshot("11-METAS_CLIENTES_VENDAS_PEDIDOS_Screenshot_Image.png");
     //EU COMPARO A FOTO COM A DA BASE.
-    I.seeVisualDiff("11-METAS_CLIENTES_VENDAS_PEDIDOS_Screenshot_Image.png", {tolerance: 4, prepareBaseImage: false});
+    I.seeVisualDiff("11-METAS_CLIENTES_VENDAS_PEDIDOS_Screenshot_Image.png", {tolerance: 4, prepareBaseImage:false});
     // EU ESPERO.
     I.wait(1)
 
-}).tag('@TelaDeVendedores');
+}).tag('@MenuInicialTelaDeVendedores');
 
-Scenario('Metas', () => {
+Scenario('02-Metas', () => {
     //EU ENTRO NO METAS DENTRO DO VENDEDORES.
 
     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -47,9 +47,9 @@ Scenario('Metas', () => {
     // EU ESPERO PELO ELEMNTO VENCIDAS.
     I.waitForElement('VENCIDAS', 4)
     //EU TIRO UMA FOTO.
-    I.saveScreenshot("12-VIGENTES_VENCIDAS_Screenshot_Image.png");
+    I.saveScreenshot("12-METAS_Screenshot_Image.png");
     //EU COMPARO A FOTO COM A FOTO DA BASE.
-    I.seeVisualDiff("12-VIGENTES_VENCIDAS_Screenshot_Image.png", {tolerance: 4, prepareBaseImage: false});
+    I.seeVisualDiff("12-METAS_Screenshot_Image.png", {tolerance: 4, prepareBaseImage: false});
     //EU VOLTO.
     I.tap('~Navigate up')
     //EU ESPERO.
@@ -57,7 +57,7 @@ Scenario('Metas', () => {
 
 }).tag('@Metas');
 
-Scenario('Clientes', () => {
+Scenario('03-Clientes', () => {
     //EU ENTRO DENTRO DE CLIENTES.
 
      //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -80,7 +80,7 @@ Scenario('Clientes', () => {
 
 }).tag('@Clientes');
 
-Scenario('Vendas', () => {
+Scenario('04-Vendas', () => {
     //EU ENTRO EM VENDAS.//
 
      //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
@@ -95,7 +95,7 @@ Scenario('Vendas', () => {
     //EU TIRO UMA FOTO.
     I.saveScreenshot("14-VENDAS_Screenshot_Image.png");
     //EU COMPARO A FOTO COM A DA BASE.
-    I.seeVisualDiff("14-VENDAS_Screenshot_Image.png", {tolerance: 4, prepareBaseImage: false});
+    I.seeVisualDiff("14-VENDAS_Screenshot_Image.png", {tolerance: 4, prepareBaseImage:false});
     //EU VOLTO.
     I.tap('~Navigate up')
     //EU ESPERO.
@@ -103,7 +103,7 @@ Scenario('Vendas', () => {
 
 }).tag('@Vendas');
 
-Scenario('PEDIDOS', () => {
+Scenario('05-PEDIDOS', () => {
     //EU ENTRO NO PEDIDOS//
 
      //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
