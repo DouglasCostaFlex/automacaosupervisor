@@ -1,4 +1,4 @@
-Feature('Login').tag('@login');
+Feature('101-Login').tag('@login');
 
 // ESSAS SÃO VARIAVEIS PARA REALIZAR AUTOMAÇAO NO LOGIN
 const {
@@ -47,7 +47,15 @@ Scenario('Config. - usuario errado', () => {
 
 }).tag('@ConfigCdfuncErrado');
 
+<<<<<<< Updated upstream:steps/01-login_test.js
 Scenario('Login com senha do usuario errado', () => {
+=======
+
+
+
+ 
+Scenario('03-Login com senha do usuario errado', () => {
+>>>>>>> Stashed changes:steps/101-login_test.js
     //EU COMO USUARIO TENTO ACESSAR COM A SENHA ERRADA//
 
     //EU COLOCO A SENHA ERRADA.

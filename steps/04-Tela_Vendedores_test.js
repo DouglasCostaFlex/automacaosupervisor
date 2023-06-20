@@ -1,5 +1,5 @@
 
-Feature('Tela Vendedores').tag('@Tela_Vendedores');
+Feature('104-Tela Vendedores').tag('@Tela_Vendedores');
 
 const {
 
@@ -14,8 +14,8 @@ const { I, clickNaTelaPage, loginPage } = inject()
 Scenario('Tela de vendedores', () => {
     //EU ENTRO NA TELA VENDEDORES//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAteoHome(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAteoHome(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU COMO USUARIO CLICO NO MENU .
     I.tap('~Navigate up')
@@ -37,8 +37,8 @@ Scenario('Tela de vendedores', () => {
 Scenario('Metas', () => {
     //EU ENTRO NO METAS DENTRO DO VENDEDORES.
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAteoVendedores(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAteoVendedores(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU CLICO EM CLIENTES, ESPERO VER METAS VIGENTES E METAS VENCIDAS
     clickNaTelaPage.doClick(157, 725)
@@ -60,8 +60,8 @@ Scenario('Metas', () => {
 Scenario('Clientes', () => {
     //EU ENTRO DENTRO DE CLIENTES.
 
-     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAteoVendedores(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    //  //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAteoVendedores(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU CLICO EM CLIENTE, ESPERO VER UMA LISTA. 
     clickNaTelaPage.doClick(450, 725)
@@ -83,8 +83,8 @@ Scenario('Clientes', () => {
 Scenario('Vendas', () => {
     //EU ENTRO EM VENDAS.//
 
-     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAteoVendedores(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    //  //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAteoVendedores(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU CLICO EM VENDAS, ESPERO VER UMA LISTA.
     clickNaTelaPage.doClick(659, 725)
@@ -106,8 +106,8 @@ Scenario('Vendas', () => {
 Scenario('PEDIDOS', () => {
     //EU ENTRO NO PEDIDOS//
 
-     //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAteoVendedores(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    //  //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAteoVendedores(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU CLICO EM PEDIDOS, ESPERO VER UMA LISTA.
     clickNaTelaPage.doClick(950, 725)

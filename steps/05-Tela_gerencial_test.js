@@ -1,4 +1,4 @@
-Feature('Tela Gerencial').tag('@Tela_Gerencial');
+Feature('105-Tela Gerencial').tag('@Tela_Gerencial');
 const { I, clickNaTelaPage, loginPage } = inject()
 const {
 
@@ -11,9 +11,10 @@ const {
 Scenario('Relatorios Web', () => {
     //EU CLICO EM RELATORIOS WEB, ESPERO CARREGAR PAGINA, ESPERO PELOS DADOS NA TELA.//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAteoHome(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAteoHome(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
+    I.wait(2)
     //EU CLICO NO MENU.
     I.tap('~Navigate up')
     //EU CLICO EM GERENCIAL.
@@ -34,14 +35,49 @@ Scenario('Relatorios Web', () => {
     I.tap('~Navigate up')
     //EU ESPERO
     I.wait(1)
-
 }).tag('@RelatoriosWeb');
 
+<<<<<<< Updated upstream:steps/05-Tela_gerencial_test.js
 Scenario('Lista Clientes', () => {
+=======
+    //EM DESENVOLVIMENTO
+
+// Scenario('01-01-Mix Venda item por vendedor ', () => {
+
+//     //EU CLICO EM MIX VENDA
+//     I.tap('Mix venda item por vendedor D101') //coordenadas 'tap', x: 509, y: 566})
+//     I.wait(5)
+//     //EU CLICO EM PESQUISAR NO FILTRO
+//     clickNaTelaPage.doClick(206,817) 
+//     //EU COLOCO 20 
+//     I.hideDeviceKeyboard('pressKey','2')
+//     I.hideDeviceKeyboard('pressKey','0')
+//     //EU APERTO EM GERAR CONSULTA
+//     clickNaTelaPage.doClick(571,1250)
+//     I.wait(5)
+//     //EU VEJO UMA LISTA
+//     I.see('~mat-expansion-panel-header-1')
+//     I.wait(1)
+//     // EU TIRO UMA FOTO,
+//     I.saveScreenshot("16-01-Mix venda_item_por_vendedor_Screenshot_Image.png");
+//     //EU COMPARO O PRINT COM O A IMAGEM BASE
+//     I.seeVisualDiff("16-01-Mix venda_item_por_vendedor_Screenshot_Image.png", { tolerance: 2, prepareBaseImage: true});
+//     I.wait(1)
+//     //EU CLICO NO MENU
+//     clickNaTelaPage.doClick(79, 285)
+//     I.wait(3)
+//     //EU VOLTO NA ABA MENU GERENCIAL.
+//     clickNaTelaPage.doClick(997, 285)
+//     I.wait(3)
+
+// });
+
+Scenario('02-Lista Clientes', () => {
+>>>>>>> Stashed changes:steps/105-Tela_gerencial_test.js
     //EU CLICO EM LISTA CLIENTES E ESPERO POR CLIENTES.//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     // EU ESPERO.
     I.wait(1)
@@ -68,8 +104,8 @@ Scenario('Lista Clientes', () => {
 Scenario('Clientes Sem Venda', () => {
     // EU CLICO EM CLIENTES SEM VENDA, ESPERO POR CLIENTES SEM VENDA//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU CLICO EM CLIENTES SEM VENDA.
     clickNaTelaPage.doClick(860, 360)
@@ -95,8 +131,8 @@ Scenario('Clientes Sem Venda', () => {
 Scenario('Cliente inadiplentes', () => {
     // EU CLICO EM CLIENTES INADIPLENTES, ESPERO POR CLIENTES INADIPLENTES//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU DOU UM CLICK NA TELA.
     clickNaTelaPage.doClick(190, 550)
@@ -123,8 +159,8 @@ Scenario('Cliente inadiplentes', () => {
 Scenario('Minhas Metas ', () => {
     // CLICO EM METAS, ESPERO POR METAS.//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU CLICO NA TELA.
     clickNaTelaPage.doClick(540, 590)
@@ -154,8 +190,8 @@ Scenario('Minhas Metas ', () => {
 Scenario('Resumo por vendedor', () => {
     //CLICO EM VENDEDOR E ESPERO POR ELEMENTOS//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU CLICO NA TELA
     clickNaTelaPage.doClick(900, 600)
@@ -181,8 +217,8 @@ Scenario('Resumo por vendedor', () => {
 Scenario('Resumo diario', () => {
     //CLICO EM RESUMO DIARIOS E ESPERO POR ELEMENTOS.//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU CLICO EM RESUMO DIARIO.
     clickNaTelaPage.doClick(170, 870)
@@ -207,8 +243,8 @@ Scenario('Resumo diario', () => {
 Scenario('Resumo devoluções', () => {
     //CLICO EM RESUMO DEVOLUÇÕES E ESPERO POR ELEMENTOS.//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU ESPERO.
     I.wait(1)
@@ -236,8 +272,8 @@ Scenario('Resumo devoluções', () => {
 Scenario('Venda por grupo de produtos', () => {
     //EU CLICO EM VENDAS E ESPERO POR ELEMENTOS.//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU ESPERO.
     I.wait(1)
@@ -264,8 +300,8 @@ Scenario('Venda por grupo de produtos', () => {
 Scenario('Vendas por linha de produto', () => {
     //EU APERTO EM VENDAS E ESPERO POR ELEMENTOS.//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU ESPERO.
     I.wait(1)
@@ -293,8 +329,8 @@ Scenario('Vendas por linha de produto', () => {
 Scenario('Clientes por linha de produto', () => {
     //EU CLICO EM LINHA DE PRODUTO E ESPERO ELEMENTOS.//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU CLICO EM LINHA DE PRODUTOS     
     clickNaTelaPage.doClick(545, 1100)
@@ -320,8 +356,8 @@ Scenario('Clientes por linha de produto', () => {
 Scenario('Relatório de produtividade', () => {
     //EU CLICO EM RELATORIO DE PRODUTIVIDADE E ESPERO POR ELEMENTOS//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU CLICO NA TELA.                 
     clickNaTelaPage.doClick(900, 1100)
@@ -355,8 +391,8 @@ Scenario('Relatório de produtividade', () => {
 Scenario('Mostrar saldo flex', () => {
     //EU APERTO EM MOSTRAR SALDO FLEX//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU CLICO NA TELA.                 
     clickNaTelaPage.doClick(200, 1380)
@@ -382,8 +418,8 @@ Scenario('Mostrar saldo flex', () => {
 Scenario('Entradas de estoque no dia', () => {
     //EU APERTO EM ENTRADAS DE ESTOQUE NO DIA E ESPERO POR ELEMENTOS//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAtéoGerencial(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
 
     //EU CLICO NA TELA.
     clickNaTelaPage.doClick(540, 1380)
@@ -413,3 +449,5 @@ Scenario('Entradas de estoque no dia', () => {
     I.wait(2)
 
 }).tag('@EntradasDeEstoqueNoDia');
+
+

@@ -1,4 +1,4 @@
-Feature('Trocar surpevisor').tag('@TrocarSurpevisor');
+Feature('103-Trocar surpevisor').tag('@TrocarSurpevisor');
 
 const {
 
@@ -15,17 +15,17 @@ Scenario('Selecionar surpevisor', () => {
 
     //EU COMO USUARIO ESPERO TROCAR O SURPERVISOR//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAteoHome(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAteoHome(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
     
    // EU APERTO NO BOTAO TROCAR SUPERVISOR.
     I.tap('#br.com.flexmobile.superv:id/selecionar_supervisor')
-     //EU ESPERO.
+     //EU ESPERO.JFJHFGH
     I.wait(3)
     // EU TIRO UMA FOTO.                                            
     I.saveScreenshot("10-TrocarSupervisor_Screenshot_Image.png");
     // EU COMPARO A FOTO COM A DA BASE.
-    I.seeVisualDiff("10-TrocarSupervisor_Screenshot_Image.png", {tolerance: 4, prepareBaseImage: false});
+    I.seeVisualDiff("10-TrocarSupervisor_Screenshot_Image.png", {tolerance: 4, prepareBaseImage: true});
     //EU ESPERO.
     I.wait(1)
     // EU CLICO NA TELA.

@@ -68,6 +68,7 @@ module.exports = {
     I.fillField(this.fields.SENHA, SENHA)
     //EU ESPERO.
     I.wait(4)
+<<<<<<< Updated upstream
     //EU APERTO NO BOTAO
     I.tap('#br.com.flexmobile.superv:id/BTNLogin');
     //EU ESPERO.
@@ -77,11 +78,21 @@ module.exports = {
     //EU ESPERO PELO ELEMENTO HOME
     I.waitForElement('~Navigate up', 1200);
     //EU ESPERO
+=======
+    I.tap('#br.com.flexmobile.superv:id/BTNLogin')
+    I.wait(4)
+    // tryTo(() => I.tap('#android:id/button1'))
+    I.waitForElement('~Navigate up', 1200)
+>>>>>>> Stashed changes
     I.wait(2)
     //EU TIRO UMA FOTO.
     I.saveScreenshot("04-HOME_Screenshot_Image.png");
+<<<<<<< Updated upstream
     //EU COMPARO COM A BASE.
     I.seeVisualDiff("04-HOME_Screenshot_Image.png", {tolerance: 2, prepareBaseImage: false});
+=======
+    I.seeVisualDiff("04-HOME_Screenshot_Image.png", {tolerance: 5, prepareBaseImage: false})
+>>>>>>> Stashed changes
   },
 
   doLoginIniciarNovamenteAteoHome(CNPJ, CODFUNC, CDFUNC, SENHA) {

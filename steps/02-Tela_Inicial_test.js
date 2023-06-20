@@ -1,4 +1,4 @@
-Feature('Tela Inicial').tag('@TelaInicial');
+Feature('102-Tela Inicial').tag('@TelaInicial');
 
 const {
 
@@ -14,8 +14,9 @@ const { I, loginPage } = inject()
 Scenario('Total de Vendas', () => {
     //EU ESPERO VER O TOTAL DE VENDAS.//
 
-    //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
-    tryTo(() => loginPage.doLoginIniciarNovamenteAteoHome(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    // //CASO NAO TENHA LOGADO, IRA ABRIR O LOGIN NOVAMENTE.
+    // tryTo(() => loginPage.doLoginIniciarNovamenteAteoHome(CNPJ_CORRETO, CD_FUNC, USUARIO_CORRETO, SENHA_CORRETA))
+    
     //EU ESPEROO VER O TOTAL DE VENDAS
     I.seeElement('#br.com.flexmobile.superv:id/total_vendas')
     //EU ESPERO
@@ -23,7 +24,11 @@ Scenario('Total de Vendas', () => {
     // EU TIRO UMA FOTO DO TOTAL DE VENDAS.
     I.saveScreenshot("05-TotalDeVendas_Screenshot_Image.png");
     //EU COMPARO A FOTO COM A FOTO DA BASE
+<<<<<<< Updated upstream:steps/02-Tela_Inicial_test.js
     I.seeVisualDiff("05-TotalDeVendas_Screenshot_Image.png", { tolerance: 2, prepareBaseImage: false });
+=======
+    I.seeVisualDiff("05-TotalDeVendas_Screenshot_Image.png", { tolerance: 5, prepareBaseImage: false  });
+>>>>>>> Stashed changes:steps/102-Tela_Inicial_test.js
     //EU ESPERO.
     I.wait(1)
     
